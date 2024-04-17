@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+    margin: 0;
+    font-family: Manrope;
+}
+
+#main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    color: var(--light-cyan);
+    text-align: center;
+}
+
+#card {
+    width: 50vh;
+    background-color: var(--dark-grayish-blue);
+    border-radius: 15px;
+    padding: 30px 20px;
+}
+
+#advice-title {
+    color: var(--neon-green);
+    font-weight: bold;
+    font-size: 0.8em;
+    letter-spacing: 0.35em;
+}
+
+#advice {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+#divider {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#dice-btn {
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#dice-btn:hover {
+  box-shadow: 0 5px 30px hsla(150, 100%, 66%, 0.8);
+}
