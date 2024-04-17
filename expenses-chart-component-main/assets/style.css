@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    font-family: DM Sans;
+    font-size: 18px;
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    background-color: hsl(27, 66%, 92%);
+}
+
+.row-grid {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 15px;
+}
+
+.col-grid {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.card-container {
+    width: 50vh;
+    margin: auto;
+    grid-template-rows: auto auto;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#balance-card {
+    background-color: hsl(10, 79%, 65%);
+    color: hsl(27, 66%, 92%);
+}
+
+#spending-card {
+    background-color: hsl(33, 100%, 98%);
+    color: hsl(25, 47%, 15%);
+}
+
+#balance {
+    margin-top: 5px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#logo-container {
+    display: flex;
+    margin: auto 0 auto auto;
+}
+
+#logo-container > img {
+    width: 6.5vh;
+    height: 6.5vh;
+}
+
+#spending-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#graph {
+    height: 20vh;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: hsla(28, 10%, 53%, 0.2);
+    border: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#total-spending-title {
+    color: hsla(28, 10%, 53%, 0.7);
+}
+
+#total-spending {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#increase-container {
+    margin: auto 0 auto auto;
+}
+
+#percentage {
+    text-align: right;
+    font-weight: bold;
+}
+
+#time-period-title {
+    color: hsla(28, 10%, 53%, 0.7);
+}
+
+.graph-container {
+    column-gap: 13px;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+#graph div {
+    margin-top: auto;
+    margin-bottom: 0;
+    border-radius: 10px;
+    background-color: hsl(10, 79%, 65%);
+    position: relative;
+    display: inline-block;
+}
+
+#graph-labels {
+    text-align: center;
+}
+
+#graph-labels div {
+    color: hsla(28, 10%, 53%, 0.7);
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: hsl(25, 47%, 15%);
+    color: hsl(27, 66%, 92%);
+    bottom: 100%;
+    margin-bottom: 10px;
+}

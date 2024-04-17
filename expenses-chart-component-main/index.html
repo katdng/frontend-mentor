@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="assets/style.css"/>
+
+  <script src="index.js" type="text/javascript" defer></script>
+
+</head>
+<body>
+  <div id="main">
+
+    <div class="row-grid card-container">
+      <div class="card" id="balance-card">
+        <div class="col-grid">
+          <div id="balance-container">
+            <div>My balance</div>
+            <div id="balance">$921.48</div>
+          </div>
+
+          <div id="logo-container">
+            <img alt="logo" src="images/logo.svg"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="spending-card">
+        <div id="spending-title">Spending - Last 7 days</div>
+
+        <div class="graph-container col-grid" id="graph">
+          <div id="mon"><span class="tooltip"></span></div>
+          <div id="tue"><span class="tooltip"></span></div>
+          <div id="wed"><span class="tooltip"></span></div>
+          <div id="thu"><span class="tooltip"></span></div>
+          <div id="fri"><span class="tooltip"></span></div>
+          <div id="sat"><span class="tooltip"></span></div>
+          <div id="sun"><span class="tooltip"></span></div>
+        </div>
+        <div class="graph-container col-grid" id="graph-labels">
+          <div>mon</div>
+          <div>tue</div>
+          <div>wed</div>
+          <div>thu</div>
+          <div>fri</div>
+          <div>sat</div>
+          <div>sun</div>
+        </div>
+
+        <hr/>
+
+        <div class="col-grid">
+          <div>
+            <div id="total-spending-title">Total this month</div>
+            <div id="total-spending">$478.33</div>
+          </div>
+
+          <div id="increase-container">
+            <div id="percentage">
+              +2.4%
+            </div>
+            <div id="time-period-title">
+              from last month
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
