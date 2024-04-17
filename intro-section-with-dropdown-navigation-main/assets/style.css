@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+:root {
+    --white: hsl(0, 0%, 98%);
+    --gray: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+}
+
+body {
+    font-family: Epilogue;
+    margin: 0;
+    font-size: 18px;
+}
+
+body button {
+    font-family: Epilogue;
+    font-size: 18px;
+    border: none;
+    background: none;
+    outline: none;
+	cursor: pointer;
+	display: flex;
+}
+
+.col-grid {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.row-grid {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+#main {
+    min-height: 100vh;
+    min-width: 100%;
+    display: inline-block;
+    background-color: hsl(0, 0%, 98%);
+}
+
+#nav {
+    padding: 30px;
+    grid-template-columns: max-content 1fr min-content;
+    align-items: center;
+}
+
+#logo-container {
+    display: flex;
+}
+
+#logo-container > img {
+    margin: auto;
+}
+
+#nav-links-col {
+    grid-template-columns: min-content min-content min-content min-content;
+    padding: 0 5rem;
+    column-gap: 5rem;
+    color: var(--gray);
+}
+
+#nav-links-col button {
+    color: var(--gray);
+}
+
+#nav-links-col button:hover {
+    color: var(--black);
+}
+
+#features-btn > img,
+#company-btn > img {
+    display: flex;
+    margin: 5px 10px;
+}
+
+#accounts-col {
+    grid-template-columns: min-content min-content;
+    column-gap: 5rem;
+    color: var(--gray);
+    align-items: center;
+}
+
+#accounts-col button {
+    color: var(--gray);
+}
+
+#accounts-col button:hover {
+    color: var(--black);
+}
+
+#register-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--gray);
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+#register-btn:hover {
+    border-color: var(--black);
+}
+
+#container {
+   grid-template-columns: auto auto;
+   column-gap: 5rem;
+   min-height: 85vh;
+   max-height: 85vh;
+   justify-content: center;
+   align-items: center;
+}
+
+#image-container > img {
+  object-fit: contain;
+  width: 60vh;
+  margin: auto;
+}
+
+#info-container {
+    margin-left: 15vh;
+    margin-right: 15vh;
+    grid-template-rows: auto auto auto 2fr auto;
+}
+
+#title {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+#descr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+#learn-more-btn {
+	padding: 15px 25px;
+	color: var(--white);
+	border: 2px solid var(--black);
+	border-radius: 10px;
+	background-color: var(--black);
+}
+
+#learn-more-btn:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+#separator {
+    min-height: 10vh;
+}
+
+#customers-container {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#customers-container div {
+    margin: auto;
+}
+
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+  z-index: 1;
+  margin-top: 17px;
+}
+
+.dropdown-content a {
+  color: var(--gray);
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a span img {
+  padding: 0 15px 0 0;
+}
+
+.dropdown-content a:hover {
+    cursor: pointer;
+}
+
+.show-dropdown {
+    display:block;
+}
