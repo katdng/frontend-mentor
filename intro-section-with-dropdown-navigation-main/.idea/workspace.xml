@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e243fd4-d177-4654-8625-fa380ca911fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ecommerce-product-page-main/.idea/ecommerce-product-page-main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ecommerce-product-page-main/assets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ecommerce-product-page-main/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3e243fd4-d177-4654-8625-fa380ca911fd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,5 +43,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

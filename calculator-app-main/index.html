@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <link rel="stylesheet" href="assets/style.css"/>
+    <script type="text/javascript" src="index.js" defer></script>
+</head>
+<body>
+<div id="main"> <!-- theme gets added here; default is theme-1 -->
+    <div class="row-grid" id="calculator">
+        <div class="col-grid" id="top-bar">
+            <div id="title">calc</div>
+            <div id="switch-ctr">
+                <p>THEME</p>
+                <div id="switch" class="switch">
+                    <input id="theme-1" name="theme" type="radio" value="1" class="switch-input" checked/>
+                    <label for="theme-1" class="switch-label switch-label-1">1</label>
+                    <label class="switch-label-top">1</label>
+                    <input id="theme-2" name="theme" type="radio" value="2" class="switch-input"/>
+                    <label for="theme-2" class="switch-label switch-label-2">2</label>
+                    <label class="switch-label-top">2</label>
+                    <input id="theme-3" name="theme" type="radio" value="3" class="switch-input"/>
+                    <label for="theme-3" class="switch-label switch-label-3">3</label>
+                    <label class="switch-label-top">3</label>
+                    <span class="switch-selector"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="result">0</div>
+
+        <div id="keypad-ctr" class="row-grid">
+            <div class="col-grid keypad-btn-ctr">
+                <button class="key">7</button>
+                <button class="key">8</button>
+                <button class="key">9</button>
+                <button class="key del-btn">DEL</button>
+            </div>
+
+            <div class="col-grid keypad-btn-ctr">
+                <button class="key">4</button>
+                <button class="key">5</button>
+                <button class="key">6</button>
+                <button class="key">+</button>
+            </div>
+
+            <div class="col-grid keypad-btn-ctr">
+                <button class="key">1</button>
+                <button class="key">2</button>
+                <button class="key">3</button>
+                <button class="key">-</button>
+            </div>
+
+            <div class="col-grid keypad-btn-ctr">
+                <button class="key">.</button>
+                <button class="key">0</button>
+                <button class="key">/</button>
+                <button class="key">x</button>
+            </div>
+
+            <div class="col-grid keypad-btn-ctr keypad-end-row-ctr">
+                <button class="key reset-btn">RESET</button>
+                <button class="key total-btn">=</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+</div>
+</body>
+</html>

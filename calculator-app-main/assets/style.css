@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    /* theme 1 */
+    --color-main-bg: hsl(222, 26%, 31%);
+    --color-element-bg: hsl(223, 31%, 20%);
+    --color-screen-bg: hsl(224, 36%, 15%);
+    --color-toggle: hsla(0, 0%, 100%);
+    --color-toggle-bg: hsl(6, 63%, 50%);
+
+    --color-title: hsl(0, 0%, 100%);
+    --color-result-text: hsl(0, 0%, 100%);
+
+    --color-keypad-bg: hsl(223, 31%, 20%);
+    --color-key-bg: hsl(30, 25%, 89%);
+    --color-key-shadow: hsl(28, 16%, 65%);
+    --color-key: hsl(221, 14%, 31%);
+    --color-total-bg: hsl(6, 63%, 50%);
+    --color-total-shadow: hsl(6, 70%, 34%);
+    --color-total: hsl(0, 0%, 100%);
+    --color-ctrl-bg: hsl(225, 21%, 49%);
+    --color-ctrl-shadow: hsl(224, 28%, 35%);
+    --color-ctrl: hsla(0, 0%, 100%);
+}
+
+.theme-2 {
+    --color-main-bg: hsl(0, 0%, 90%);
+    --color-element-bg: hsl(0, 5%, 81%);
+    --color-screen-bg: hsl(0, 0%, 93%);
+    --color-toggle: hsl(60, 10%, 19%);
+    --color-toggle-bg: hsl(25, 98%, 40%);
+
+    --color-title: hsl(60, 10%, 19%);
+    --color-result-text: hsl(60, 10%, 19%);
+
+    --color-keypad-bg: hsl(0, 5%, 81%);
+    --color-key-bg: hsl(45, 7%, 89%);
+    --color-key-shadow: hsl(35, 11%, 61%);
+    --color-key: hsl(60, 10%, 19%);
+    --color-total-bg: hsl(25, 98%, 40%);
+    --color-total-shadow: hsl(25, 99%, 27%);
+    --color-total: hsl(0, 0%, 100%);
+    --color-ctrl-bg: hsl(185, 42%, 37%);
+    --color-ctrl-shadow: hsl(185, 58%, 25%);
+    --color-ctrl: hsla(0, 0%, 100%);
+}
+
+.theme-3 {
+    --color-main-bg: hsl(268, 75%, 9%);
+    --color-element-bg: hsl(268, 71%, 12%);
+    --color-screen-bg: inherit;
+    --color-toggle: hsl(52, 100%, 62%);
+    --color-toggle-bg: hsl(176, 100%, 44%);
+
+    --color-title: hsl(52, 100%, 62%);
+    --color-result-text: hsl(52, 100%, 62%);
+
+    --color-keypad-bg: hsl(268, 71%, 12%);
+    --color-key-bg: hsl(268, 47%, 21%);
+    --color-key-shadow: hsl(285, 91%, 52%);
+    --color-key: hsl(52, 100%, 62%);
+    --color-total-bg: hsl(176, 100%, 44%);
+    --color-total-shadow: hsl(177, 92%, 70%);
+    --color-total: hsl(268, 75%, 9%);
+    --color-ctrl-bg: hsl(281, 89%, 26%);
+    --color-ctrl-shadow: hsl(285, 91%, 52%);
+    --color-ctrl: hsla(0, 0%, 100%);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: League Spartan;
+}
+
+button {
+    outline: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.row-grid {
+    display: grid;
+    grid-auto-template: row;
+}
+
+.col-grid {
+    display: grid;
+    grid-auto-template: row;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-main-bg);
+    align-items: center;
+    justify-content: center;
+}
+
+#calculator {
+    min-height: 50vh;
+    min-width: 40vh;
+    padding: 10px;
+    grid-template-rows: min-content min-content 1fr;
+    row-gap: 20px;
+}
+
+
+/* THEME & TITLE BAR*/
+#top-bar {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    height: min-content;
+}
+
+#title {
+    color: var(--color-title);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#switch-ctr {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    color: var(--color-toggle);
+}
+
+#switch-ctr > p {
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    margin: auto 20px;
+}
+
+
+/* Switch */
+.switch {
+  position: relative;
+  height: 20px;
+  width: 55px;
+  background-color: var(--color-element-bg);
+  border-radius: 32px;
+}
+
+.switch-label {
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 18px;
+  line-height: 22px;
+  font-size: 10px;
+  color: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+
+.switch-label-top {
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  float: left;
+  width: 18px;
+  line-height: 22px;
+  font-size: 10px;
+  color: var(--color-title);
+  text-align: center;
+  top: -18px;
+  transform: translateX(-100%);
+}
+
+.switch-input {
+   display: none;
+}
+
+.switch-input ~ .switch-selector {
+    background-color: var(--color-toggle-bg);
+    height: 13px;
+    width: 13px;
+    top: 4px;
+    transform: translateX(22%);
+}
+
+.switch-input:checked + .switch-label-1 ~ .switch-selector {
+  transform: translateX(22%);
+}
+
+.switch-input:checked + .switch-label-2 ~ .switch-selector {
+  transform: translateX(158%);
+}
+
+.switch-input:checked + .switch-label-3 ~ .switch-selector {
+  transform: translateX(295%);
+}
+
+.switch-selector {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 100px;
+  height: 32px;
+  border-radius: 32px;
+  background-color: #1ab394;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+
+/* RESULT CONTAINER */
+#result {
+    background-color: var(--color-screen-bg);
+    border-radius: 7px;
+    padding: 20px 15px;
+    min-height: 75px;
+    max-height: 75px;
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--color-result-text);
+    text-align: right;
+    line-height: 40px;
+}
+
+
+/* KEYPAD CONTAINER */
+#keypad-ctr {
+    padding: 18px;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 15px;
+    background-color: var(--color-keypad-bg);
+    border-radius: 7px;
+}
+
+.keypad-btn-ctr {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+}
+
+.key {
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px 10px 5px 10px;
+    font-weight: bold;
+    background-color: var(--color-key-bg);
+    color: var(--color-key);
+    font-size: 32px;
+    box-shadow: 0 2px 0 1px var(--color-key-shadow);
+}
+
+.key:hover {
+    filter: brightness(160%);
+}
+
+.keypad-end-row-ctr {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.del-btn,
+.reset-btn {
+    background-color: var(--color-ctrl-bg);
+    color: var(--color-ctrl);
+    box-shadow: 0 2px 0 1px var(--color-ctrl-shadow);
+}
+
+.total-btn {
+    background-color: var(--color-total-bg);
+    color: var(--color-total);
+    box-shadow: 0 2px 0 1px var(--color-total-shadow);
+}
