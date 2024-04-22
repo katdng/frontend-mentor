@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+    <script type="text/javascript" src="index.js" defer></script>
+</head>
+<body>
+<div id="main">
+    <div class="row-grid" id="ctr">
+        <div class="col-grid" id="top-nav">
+            <div id="title">TODO</div>
+            <div id="theme-btn-ctr">
+                <button id="theme-btn" value="light"><img src="images/icon-moon.svg"></button>
+            </div>
+        </div>
+
+        <div class="task-ctr" id="create-task-ctr">
+            <form id="new-todo-form">
+                <button></button>
+                <input type="text" id="new-task" name="task" placeholder="Create a new todo..." value="">
+            </form>
+        </div>
+
+        <div id="tasks-ctr">
+            <div id="tasks">
+            </div>
+
+            <div class="task-ctr-template" draggable="true">
+                <button class="check-btn"><img src="images/icon-check.svg"></button>
+                <input type="text" value="">
+                <button class="delete-btn"><img src="images/icon-cross.svg"></button>
+            </div>
+
+            <div class="col-grid" id="tasks-ctrl-ctr">
+                <div><span id="total-items">0</span> items left</div>
+
+                <div id="filter-btn-ctr">
+                    <button class="selected">All</button>
+                    <button>Active</button>
+                    <button>Completed</button>
+                </div>
+
+                <div>
+                    <button id="clear-compl-tasks-btn">Clear Completed</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="drag-drop-desc">Drag and drop to reorder list</div>
+    </div>
+</div>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+</div>
+</body>
+</html>

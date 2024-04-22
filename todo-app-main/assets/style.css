@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --bg-color: hsl(0, 0%, 98%);
+    --title-color: hsl(0, 0%, 98%);
+    --ctr-shadow: hsl(236, 9%, 61%);
+    --input-bg: hsl(0, 0%, 100%);
+    --input: hsl(235, 19%, 35%);
+    --input-placeholder: hsl(233, 11%, 84%);
+    --check-btn-inactive: hsl(233, 11%, 84%);
+    --tasks-ctrl: hsl(233, 11%, 84%);
+    --tasks-ctrl-hover: hsl(235, 19%, 35%);
+    --filter-selected: #0070E0;
+}
+
+.dark {
+    --bg-color: hsl(235, 24%, 19%);
+    --title-color: hsl(0, 0%, 98%);
+    --ctr-shadow: hsl(235, 21%, 11%);
+    --input-bg: hsl(237, 14%, 26%);
+    --input: hsl(233, 11%, 84%);
+    --input-placeholder: hsl(234, 11%, 52%);
+    --check-btn-inactive: hsl(233, 14%, 35%);
+    --tasks-ctrl: hsl(234, 11%, 52%);
+    --tasks-ctrl-hover: hsl(233, 11%, 84%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Josefin Sans;
+}
+
+body {
+    font-size: 18px;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type=text] {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 20px 10px 20px 58px;
+    border-radius: 3px;
+    height: 60px;
+    font-size: 18px;
+    color: var(--input);
+    background-color: var(--input-bg);
+}
+
+input[type=text]::placeholder {
+    color: var(--input-placeholder);
+}
+
+.row-grid {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.col-grid {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#main {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    background-image: url(../images/bg-desktop-light.jpg);
+    background-size: 100% 40vh;
+    background-repeat: no-repeat;
+}
+
+
+#ctr {
+    grid-template-rows: min-content min-content min-content;
+    row-gap: 30px;
+    height: 85vh;
+    width: 70vh;
+    padding: 15px;
+}
+
+#top-nav {
+    grid-template-columns: min-content min-content;
+    justify-content: space-between;
+    height: min-content;
+    width: 100%;
+    padding: 10px 0;
+}
+
+#title {
+    color: var(--title-color);
+    font-size: 33px;
+    letter-spacing: 0.5em;
+    font-weight: 600;
+}
+
+#theme-btn-ctr {
+    margin: auto;
+}
+
+/* NEW TASK CONTAINER */
+#create-task-ctr {
+    box-shadow: 0px 0px 10px var(--ctr-shadow);
+    position: relative;
+}
+
+#create-task-ctr button {
+    cursor: default;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--check-btn-inactive);
+    position: absolute;
+    top: 16px;
+    left: 18px;
+}
+
+
+/* TASKS CONTAINER */
+#tasks-ctr {
+    width: 100%;
+    height: min-content;
+    background-color: var(--input-bg);
+    border-radius: 5px;
+    box-shadow: 0px 3px 18px var(--ctr-shadow);
+}
+
+#tasks-ctrl-ctr {
+    padding: 15px 20px 15px 20px;
+    grid-template-columns: max-content 1fr max-content;
+    width: 100%;
+}
+
+#tasks-ctrl-ctr button:hover {
+    color: var(--tasks-ctrl-hover);
+}
+
+#tasks-ctrl-ctr,
+#tasks-ctrl-ctr button {
+    color: var(--tasks-ctrl);
+    font-size: 15px;
+}
+
+#filter-btn-ctr {
+    display: flex;
+    justify-content: center;
+}
+
+#filter-btn-ctr button.selected {
+    color: var(--filter-selected);
+}
+
+/* TASK ITEM TEMPLATE */
+.task-ctr-template {
+    width: 100%;
+    position: relative;
+    display: none;
+}
+
+.task-ctr-template .check-btn {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--check-btn-inactive);
+    position: absolute;
+    top: 16px;
+    left: 18px;
+}
+
+.task-ctr-template .check-btn > img {
+    display: none;
+}
+
+.task-ctr-template .check-btn.checked {
+    background: linear-gradient(to right,hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+    border: none;
+}
+
+.task-ctr-template .check-btn.checked > img {
+    display: block;
+}
+
+.task-ctr-template .delete-btn {
+    margin: auto 10px;
+}
+
+/* Drag drop */
+#drag-drop-desc {
+    display: flex;
+    width: 100%;
+    height: min-height;
+    justify-content: center;
+    font-size: 15px;
+    color: var(--tasks-ctrl);
+    margin-left: -25px;
+}
