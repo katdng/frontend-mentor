@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Job Listings</title>
+
+    <link rel="stylesheet" href="assets/style.css"/>
+    <script type="text/javascript" src="index.js" defer></script>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+
+            <div class="col-grid" id="filter-ctr">
+                <div id="filters">
+                    <div class="filter template">
+                        <div class="fname">Frontend</div>
+                        <button class="remove-btn"><img src="images/icon-remove.svg"></button>
+                    </div>
+                </div>
+                <button id="clear-filter-btn">Clear</button>
+            </div>
+        </div>
+
+        <div id="pad"></div>
+
+        <div class="row-grid" id="jobs-ctr">
+            <div class="job col-grid template">
+                <div class="logo-ctr"><img class="logo" src=""></div>
+
+                <div class="info row-grid">
+                    <div class="info-top">
+                        <span class="company">Photosnap</span>
+                        <button class="badge new">NEW!</button>
+                        <button class="badge ftrd">FEATURED</button>
+                    </div>
+
+                    <div class="title">Senior Frontend Developer</div>
+
+                    <div class="info-btm">
+                        <span class="posted">1d ago</span>
+                        <span class="sep">&#8226;</span>
+                        <span class="duration">Contract</span>
+                        <span class="sep">&#8226;</span>
+                        <span class="location">USA only</span>
+                    </div>
+                </div>
+
+                <div class="langs col-grid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+    </div>
+</body>
+</html>
