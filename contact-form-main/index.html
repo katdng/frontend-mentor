@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <link rel="stylesheet" href="assets/style.css"/>
+    <script type="text/javascript" src="index.js" defer></script>
+</head>
+<body>
+<div id="main">
+    <div id="toast-container">
+        <div class="row-grid">
+            <div id="message-sent">
+                <span><img id="message-sent-icon" src="assets/images/icon-success-check.svg"></span><span>Message Sent</span>
+            </div>
+
+            <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+    </div>
+
+    <div id="container">
+        <h1>Contact Us</h1>
+
+        <form id="contact-form" novalidate>
+            <div class="row-grid" id="input-form">
+                <!-- First Name, Last Name -->
+                <div class="col-grid" id="name-row">
+                    <div>
+                        <label for="first-name">First Name <span class="required">*</span></label>
+                        <input id="first-name" name="first-name" type="text" value="" required>
+                        <label class="error">This field is required.</label>
+                    </div>
+
+                    <div>
+                        <label for="last-name">Last Name <span class="required">*</span></label>
+                        <input id="last-name" name="last-name" type="text" value="" required>
+                        <label class="error">This field is required.</label>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-grid" id="email-row">
+                    <div>
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input id="email" name="email" type="text" value="" required>
+                        <label class="error">Please enter a valid email.</label>
+                    </div>
+                </div>
+
+                <!-- Query Type -->
+                <div>
+                    <label for="email">Query Type <span class="required">*</span></label>
+                    <div class="col-grid" id="query-type-row">
+                        <div class="radio-option">
+                            <input id="query-type-opt-1" name="query-type" type="radio" value="general-enquiry"
+                                   required>
+                            <label for="query-type-opt-1">General Enquiry</label>
+                        </div>
+
+                        <div class="radio-option">
+                            <input id="query-type-opt-2" name="query-type" type="radio" value="support-request">
+                            <label for="query-type-opt-2">Support Request</label>
+                        </div>
+                    </div>
+                    <label class="error">Please select a query type.</label>
+                </div>
+
+                <!-- Message -->
+                <div class="col-grid" id="message-row">
+                    <div>
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="3" required></textarea>
+                        <label class="error">This field is required.</label>
+                    </div>
+                </div>
+
+                <!-- Check -->
+                <div>
+                    <div class="col-grid" id="agree-row">
+                        <div>
+                            <input id="consent" name="consent" type="checkbox" value="true" required>
+                            <label for="consent">I consent to being contacted by the team <span
+                                    class="required">*</span></label>
+                        </div>
+                    </div>
+                    <label class="error">To submit this form, please consent to being contacted.</label>
+                </div>
+
+
+                <div class="col-grid">
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+</div>
+</body>
+</html>
